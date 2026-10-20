@@ -1,0 +1,158 @@
+[
+ {
+  "icaoId": "LBGO",
+  "receiptTime": "2026-10-20T11:00:23.217Z",
+  "obsTime": 1792494000,
+  "reportTime": "2026-10-20T11:00:00.000Z",
+  "temp": 22,
+  "dewp": 7,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1022,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LBGO 201100Z AUTO VRB02KT 9999 NCD 22/07 Q1022 NOSIG",
+  "lat": 43.151,
+  "lon": 25.713,
+  "elev": 84,
+  "name": "Gorna Orechovista Arpt, LO, BG",
+  "cover": "CLR",
+  "clouds": [],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LROP",
+  "receiptTime": "2026-10-20T11:04:22.774Z",
+  "obsTime": 1792494000,
+  "reportTime": "2026-10-20T11:00:00.000Z",
+  "temp": 19,
+  "dewp": 12,
+  "wdir": 140,
+  "wspd": 4,
+  "visib": "6+",
+  "altim": 1023,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LROP 201100Z 14004KT 090V180 CAVOK 19/12 Q1023 NOSIG",
+  "lat": 44.572,
+  "lon": 26.102,
+  "elev": 92,
+  "name": "Bucharest/Coandă Intl, B, RO",
+  "cover": "CAVOK",
+  "clouds": [],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LBIA",
+  "receiptTime": "2026-10-20T11:00:22.983Z",
+  "obsTime": 1792494000,
+  "reportTime": "2026-10-20T11:00:00.000Z",
+  "temp": 20.6,
+  "dewp": 8.7,
+  "wdir": 10,
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1022,
+  "qcField": 0,
+  "metarType": "METAR",
+  "rawOb": "METAR LBIA 201100Z 01002KT 9999 BKN200 21/09 Q1022 RMK T02060087",
+  "lat": 42.456,
+  "lon": 26.352,
+  "elev": 155,
+  "name": "Bezmer, BU, BG",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 20000
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LBBG",
+  "receiptTime": "2026-10-20T11:00:23.167Z",
+  "obsTime": 1792494000,
+  "reportTime": "2026-10-20T11:00:00.000Z",
+  "temp": 18,
+  "dewp": 13,
+  "wdir": 110,
+  "wspd": 10,
+  "visib": "6+",
+  "altim": 1023,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LBBG 201100Z 11010KT 9999 FEW015 18/13 Q1023 NOSIG",
+  "lat": 42.569,
+  "lon": 27.514,
+  "elev": 41,
+  "name": "Burgas Arpt, BU, BG",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 1500
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LBWN",
+  "receiptTime": "2026-10-20T11:00:23.140Z",
+  "obsTime": 1792494000,
+  "reportTime": "2026-10-20T11:00:00.000Z",
+  "temp": 18,
+  "dewp": 12,
+  "wdir": 120,
+  "wspd": 10,
+  "visib": "6+",
+  "altim": 1023,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LBWN 201100Z 12010KT 9999 FEW019 18/12 Q1023 NOSIG",
+  "lat": 43.232,
+  "lon": 27.825,
+  "elev": 74,
+  "name": "Varna Intl, VA, BG",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 1900
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LBWB",
+  "receiptTime": "2026-10-20T11:03:19.366Z",
+  "obsTime": 1792494000,
+  "reportTime": "2026-10-20T11:00:00.000Z",
+  "temp": 16.5,
+  "dewp": 12,
+  "wdir": 130,
+  "wspd": 6,
+  "visib": "6+",
+  "altim": 1023,
+  "qcField": 0,
+  "metarType": "METAR",
+  "rawOb": "METAR LBWB 201100Z 13006KT 9999 FEW040 SCT100 17/12 Q1023 RMK T01650120",
+  "lat": 43.425,
+  "lon": 28.175,
+  "elev": 190,
+  "name": "Balchik, VA, BG",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 4000
+   },
+   {
+    "cover": "SCT",
+    "base": 10000
+   }
+  ],
+  "fltCat": "VFR"
+ }
+]

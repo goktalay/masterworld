@@ -1,0 +1,170 @@
+{
+ "type": "FeatureCollection",
+ "metadata": {
+  "count": 6
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.49,
+     -21.55,
+     -120.5
+    ]
+   },
+   "id": "20261020_0000148",
+   "properties": {
+    "source_id": "2077610",
+    "source_catalog": "EMSC-RTS",
+    "lastupdate": "2026-10-20T11:09:15.94693Z",
+    "time": "2026-10-20T11:02:06.0Z",
+    "flynn_region": "ANTOFAGASTA, CHILE",
+    "lat": -21.55,
+    "lon": -68.49,
+    "depth": 120.5,
+    "evtype": "ke",
+    "auth": "CSN",
+    "mag": 2.5,
+    "magtype": "ml",
+    "unid": "20261020_0000148"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.2778,
+     48.1907,
+     -5.0
+    ]
+   },
+   "id": "20261020_0000147",
+   "properties": {
+    "source_id": "2077608",
+    "source_catalog": "EMSC-RTS",
+    "lastupdate": "2026-10-20T11:07:19.06978Z",
+    "time": "2026-10-20T10:58:45.196473Z",
+    "flynn_region": "FRANCE",
+    "lat": 48.1907,
+    "lon": -0.2778,
+    "depth": 5.0,
+    "evtype": "ke",
+    "auth": "ReNaSS",
+    "mag": 2.2,
+    "magtype": "ml",
+    "unid": "20261020_0000147"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -86.528,
+     10.788,
+     -9.0
+    ]
+   },
+   "id": "20261020_0000146",
+   "properties": {
+    "source_id": "2077606",
+    "source_catalog": "EMSC-RTS",
+    "lastupdate": "2026-10-20T11:01:15.323691Z",
+    "time": "2026-10-20T10:57:04.0Z",
+    "flynn_region": "OFF COAST OF COSTA RICA",
+    "lat": 10.788,
+    "lon": -86.528,
+    "depth": 9.0,
+    "evtype": "ke",
+    "auth": "INET",
+    "mag": 3.1,
+    "magtype": "m",
+    "unid": "20261020_0000146"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.2157,
+     39.3223,
+     -2.0
+    ]
+   },
+   "id": "20261020_0000144",
+   "properties": {
+    "source_id": "2077604",
+    "source_catalog": "EMSC-RTS",
+    "lastupdate": "2026-10-20T10:49:56.677589Z",
+    "time": "2026-10-20T10:48:17.14Z",
+    "flynn_region": "NORTHERN CALIFORNIA",
+    "lat": 39.3223,
+    "lon": -123.2157,
+    "depth": 2.0,
+    "evtype": "ke",
+    "auth": "NC",
+    "mag": 2.4,
+    "magtype": "md",
+    "unid": "20261020_0000144"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -160.3291,
+     54.6088,
+     -35.0
+    ]
+   },
+   "id": "20261020_0000142",
+   "properties": {
+    "source_id": "2077603",
+    "source_catalog": "EMSC-RTS",
+    "lastupdate": "2026-10-20T10:58:26.17001Z",
+    "time": "2026-10-20T10:40:40.968Z",
+    "flynn_region": "ALASKA PENINSULA",
+    "lat": 54.6088,
+    "lon": -160.3291,
+    "depth": 35.0,
+    "evtype": "ke",
+    "auth": "NEIC",
+    "mag": 5.0,
+    "magtype": "mw",
+    "unid": "20261020_0000142"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.7828,
+     13.8588,
+     -3.5
+    ]
+   },
+   "id": "20261020_0000145",
+   "properties": {
+    "source_id": "2077602",
+    "source_catalog": "EMSC-RTS",
+    "lastupdate": "2026-10-20T10:57:16.341465Z",
+    "time": "2026-10-20T10:35:00.0Z",
+    "flynn_region": "EL SALVADOR",
+    "lat": 13.8588,
+    "lon": -89.7828,
+    "depth": 3.5,
+    "evtype": "ke",
+    "auth": "MARN",
+    "mag": 3.1,
+    "magtype": "m",
+    "unid": "20261020_0000145"
+   }
+  }
+ ]
+}

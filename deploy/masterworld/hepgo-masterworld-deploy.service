@@ -1,0 +1,24 @@
+# MASTERWORLD yayın işi (root, oneshot). hepgo-masterworld-deploy.path tetikler; elle: systemctl start hepgo-masterworld-deploy
+# deploy.sh paketi doğrular, kurar, hepgo-masterworld'ı yeniden başlatır; sağlık denetimi geçmezse önceki sürüme döner.
+[Unit]
+Description=MASTERWORLD sürüm yayını (deploy.sh)
+After=network.target
+# Aynı anda ikinci yayın başlamasın
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=oneshot
+ExecStart=/opt/hepgo/masterworld/deploy/masterworld/deploy.sh
+# İlk kurulumda /opt/hepgo/masterworld henüz yoksa betik yayın deposu klonundan ya da elle kopyadan çalıştırılır:
+#   /bin/bash /opt/hepgo/fabrika-yonetim/deploy/masterworld/deploy.sh
+Environment=MW_RELEASES=/opt/hepgo/sshmaster/data/releases/mw
+Environment=MW_APP=/opt/hepgo/masterworld
+Environment=MW_UDS=/run/hepgo/masterworld.sock
+Environment=MW_DEPLOY_LOG=/var/log/hepgo-masterworld-deploy.log
+TimeoutStartSec=900
+Nice=5
+# Yayın betiği kurulum dizini, venv ve servis dışında bir yere yazmaz
+ProtectHome=read-only
+PrivateTmp=yes
+NoNewPrivileges=no

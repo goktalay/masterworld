@@ -1,0 +1,30 @@
+[Unit]
+Description=MASTERWORLD canlı veri küresi (masterworld.app) — Unix soketi, Cloudflare tüneli önünde
+After=network.target hepgo-sshmasters.service
+
+[Service]
+User=hepgo
+Group=hepgo
+# Kurulum kökü deploy.sh ile /opt/hepgo/masterworld (root:root, hepgo yalnız okur); .env 640 root:hepgo, yayında dokunulmaz
+WorkingDirectory=/opt/hepgo/masterworld
+EnvironmentFile=/opt/hepgo/masterworld/.env
+Environment=MW_UDS=/run/hepgo/masterworld.sock
+Environment=MW_DATA_DIR=/opt/hepgo/masterworld-data
+RuntimeDirectory=hepgo
+RuntimeDirectoryPreserve=yes
+ExecStart=/opt/hepgo/masterworld/run-masterworld.sh
+Restart=always
+RestartSec=3
+KillMode=mixed
+TimeoutStopSec=20
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/hepgo/masterworld-data /run/hepgo
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+MemoryMax=1500M
+LimitNOFILE=16384
+
+[Install]
+WantedBy=multi-user.target

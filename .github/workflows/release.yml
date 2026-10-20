@@ -1,0 +1,101 @@
+# MASTERWORLD yayını.
+# - "v1.2.3" etiketi gönderilince: testler → masterworld-1.2.3.tar.gz + sha256 → GitHub Release → mastertool.download'a yükleme
+#   (sunucuda hepgo-masterworld-deploy.path paketi görür ve deploy/masterworld/deploy.sh ile otomatik yayımlar).
+# - Actions sekmesinden elle (workflow_dispatch): yalnız paketler ve artifact olarak saklar; "upload" girdisi işaretliyse
+#   mastertool.download'a da yükler (VERSION dosyasındaki sürümle).
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: "mastertool.download'a da yükle (VERSION dosyasındaki sürümle)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Sürümü belirle (etiket → VERSION)
+        id: v
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            V="${GITHUB_REF_NAME#v}"
+            echo "$V" > VERSION
+          else
+            V="$(tr -d '[:space:]' < VERSION)"
+          fi
+          [[ "$V" =~ ^[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}([.-][0-9A-Za-z.-]{1,20})?$ ]] || { echo "::error::Sürüm geçersiz: $V"; exit 1; }
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          echo "Sürüm: $V"
+
+      - name: Bağımlılıklar
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyflakes
+
+      - name: Statik denetim (pyflakes + node --check)
+        run: |
+          pyflakes app tools 2>/dev/null || pyflakes app
+          find static -name '*.js' -not -path 'static/vendor/*' -print0 | xargs -0 -n1 node --check
+
+      - name: Testler (ağsız)
+        env:
+          MW_OFFLINE: '1'
+        run: python -m unittest tests.test_sources -v
+
+      - name: Paketle
+        id: pkg
+        shell: bash
+        env:
+          V: ${{ steps.v.outputs.version }}
+        run: |
+          mkdir -p dist
+          # Çalışır ağaç: yayın deposunun kendi dosyaları (.git, .github, scripts, dist) ve geçici dosyalar dışında her şey
+          tar --sort=name --owner=0 --group=0 --numeric-owner --mtime='UTC 2020-01-01' \
+              --exclude-vcs --exclude='./.github' --exclude='./scripts' --exclude='./tests/fixtures' --exclude='./tests/shots.py' --exclude='./dist' --exclude='__pycache__' \
+              --exclude='*.pyc' --exclude='./.venv' --exclude='./.env*' --exclude='*.db' \
+              -czf "dist/masterworld-$V.tar.gz" -C . .
+          (cd dist && sha256sum "masterworld-$V.tar.gz" > "masterworld-$V.tar.gz.sha256")
+          SIZE=$(stat -c %s "dist/masterworld-$V.tar.gz")
+          echo "Paket: $SIZE bayt"; cat "dist/masterworld-$V.tar.gz.sha256"
+          [ "$SIZE" -le $((95 * 1024 * 1024)) ] || { echo "::error::Paket 95 MB'den büyük ($SIZE); vendor/büyük dosyaları gözden geçir"; exit 1; }
+          echo "sha256=$(cut -d' ' -f1 "dist/masterworld-$V.tar.gz.sha256")" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: masterworld-${{ steps.v.outputs.version }}
+          path: dist/*
+          retention-days: 14
+
+      - name: GitHub Release'e ekle
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/masterworld-${{ steps.v.outputs.version }}.tar.gz
+            dist/masterworld-${{ steps.v.outputs.version }}.tar.gz.sha256
+          generate_release_notes: true
+
+      # Anahtar depo secret'ı MASTERWORLD_RELEASE_KEY; tanımlı değilse betik uyarı verip çıkar.
+      - name: mastertool.download'a yükle
+        if: startsWith(github.ref, 'refs/tags/v') || inputs.upload
+        shell: bash
+        env:
+          MASTERWORLD_RELEASE_KEY: ${{ secrets.MASTERWORLD_RELEASE_KEY }}
+          V: ${{ steps.v.outputs.version }}
+        run: bash scripts/upload-mastertool.sh "$V" "dist/masterworld-$V.tar.gz"

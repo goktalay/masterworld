@@ -1,0 +1,15 @@
+{"total": 3, "webcams": [
+ {"webcamId": 1179853135, "title": "Sydney: Sydney Harbour Bridge - Sydney Opera House", "status": "active", "viewCount": 1282618,
+  "lastUpdatedOn": "2026-10-20T10:58:11.000Z",
+  "images": {"current": {"icon": "https://imgproxy.windy.com/_/icon/plain/current/1179853135/original.jpg?token=abc",
+     "thumbnail": "https://imgproxy.windy.com/_/thumbnail/plain/current/1179853135/original.jpg?token=abc",
+     "preview": "https://imgproxy.windy.com/_/preview/plain/current/1179853135/original.jpg?token=abc"},
+   "daylight": {}, "sizes": {}},
+  "location": {"latitude": -33.84903, "longitude": 151.21559, "city": "Sydney", "region": "New South Wales", "country": "Australia", "country_code": "AU"},
+  "urls": {"detail": "https://www.windy.com/webcams/1179853135", "edit": "https://webcams-admin.windy.com/webcams/1179853135", "provider": ""}},
+ {"webcamId": 1500000001, "title": "Kapalı kamera", "status": "inactive", "viewCount": 10, "lastUpdatedOn": "2020-01-01T00:00:00.000Z",
+  "location": {"latitude": -33.9, "longitude": 151.2}},
+ {"webcamId": 1500000002, "title": "Görüntüsüz kamera", "status": "active", "viewCount": 25, "lastUpdatedOn": "2026-10-20T10:00:00.000Z",
+  "images": {"current": {}, "daylight": {}, "sizes": {}}, "location": {"latitude": -33.7, "longitude": 151.3, "city": "Manly"},
+  "urls": {"detail": "javascript:alert(1)"}}
+]}

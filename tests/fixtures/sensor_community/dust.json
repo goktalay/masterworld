@@ -1,0 +1,252 @@
+[
+ {
+  "id": 31097881628,
+  "sampling_rate": null,
+  "timestamp": "2026-10-20 11:12:57",
+  "location": {
+   "id": 49,
+   "latitude": "48.53",
+   "longitude": "9.2",
+   "altitude": "373.1",
+   "country": "DE",
+   "exact_location": 0,
+   "indoor": 0
+  },
+  "sensor": {
+   "id": 107,
+   "pin": "5",
+   "sensor_type": {
+    "id": 1,
+    "name": "PPD42NS",
+    "manufacturer": "Shinyei"
+   }
+  },
+  "sensordatavalues": [
+   {
+    "id": 72775938510,
+    "value": "647025.00",
+    "value_type": "durP1"
+   },
+   {
+    "id": 72775938513,
+    "value": "11282.00",
+    "value_type": "durP2"
+   },
+   {
+    "id": 72775938512,
+    "value": "1115.63",
+    "value_type": "P1"
+   },
+   {
+    "id": 72775938515,
+    "value": "20.16",
+    "value_type": "P2"
+   },
+   {
+    "id": 72775938511,
+    "value": "2.15",
+    "value_type": "ratioP1"
+   },
+   {
+    "id": 72775938514,
+    "value": "0.04",
+    "value_type": "ratioP2"
+   }
+  ]
+ },
+ {
+  "id": 31097889573,
+  "sampling_rate": null,
+  "timestamp": "2026-10-20 11:14:02",
+  "location": {
+   "id": 65,
+   "latitude": "48.778",
+   "longitude": "9.16",
+   "altitude": "282.5",
+   "country": "DE",
+   "exact_location": 0,
+   "indoor": 0
+  },
+  "sensor": {
+   "id": 140,
+   "pin": "1",
+   "sensor_type": {
+    "id": 14,
+    "name": "SDS011",
+    "manufacturer": "Nova Fitness"
+   }
+  },
+  "sensordatavalues": [
+   {
+    "id": 72775958586,
+    "value": "0.00",
+    "value_type": "P1"
+   },
+   {
+    "id": 72775958606,
+    "value": "0.00",
+    "value_type": "P2"
+   }
+  ]
+ },
+ {
+  "id": 31097873598,
+  "sampling_rate": null,
+  "timestamp": "2026-10-20 11:11:54",
+  "location": {
+   "id": 45999,
+   "latitude": "48.808",
+   "longitude": "9.182",
+   "altitude": "310.1",
+   "country": "DE",
+   "exact_location": 0,
+   "indoor": 0
+  },
+  "sensor": {
+   "id": 146,
+   "pin": "1",
+   "sensor_type": {
+    "id": 14,
+    "name": "SDS011",
+    "manufacturer": "Nova Fitness"
+   }
+  },
+  "sensordatavalues": [
+   {
+    "id": 72775918055,
+    "value": "1.34",
+    "value_type": "P1"
+   },
+   {
+    "id": 72775918062,
+    "value": "1.08",
+    "value_type": "P2"
+   }
+  ]
+ },
+ {
+  "id": 31097887606,
+  "sampling_rate": null,
+  "timestamp": "2026-10-20 11:13:43",
+  "location": {
+   "id": 68,
+   "latitude": "48.792",
+   "longitude": "9.164",
+   "altitude": "326.9",
+   "country": "DE",
+   "exact_location": 0,
+   "indoor": 0
+  },
+  "sensor": {
+   "id": 151,
+   "pin": "1",
+   "sensor_type": {
+    "id": 14,
+    "name": "SDS011",
+    "manufacturer": "Nova Fitness"
+   }
+  },
+  "sensordatavalues": [
+   {
+    "id": 72775953514,
+    "value": "18.25",
+    "value_type": "P1"
+   },
+   {
+    "id": 72775953515,
+    "value": "14.22",
+    "value_type": "P2"
+   }
+  ]
+ },
+ {
+  "id": 31097876593,
+  "sampling_rate": null,
+  "timestamp": "2026-10-20 11:12:20",
+  "location": {
+   "id": 3946,
+   "latitude": "48.958",
+   "longitude": "8.284",
+   "altitude": "109.6",
+   "country": "DE",
+   "exact_location": 0,
+   "indoor": 0
+  },
+  "sensor": {
+   "id": 162,
+   "pin": "1",
+   "sensor_type": {
+    "id": 14,
+    "name": "SDS011",
+    "manufacturer": "Nova Fitness"
+   }
+  },
+  "sensordatavalues": [
+   {
+    "id": 72775925769,
+    "value": "1.35",
+    "value_type": "P1"
+   },
+   {
+    "id": 72775925790,
+    "value": "0.95",
+    "value_type": "P2"
+   }
+  ]
+ },
+ {
+  "id": 31097881628,
+  "sampling_rate": null,
+  "timestamp": "2026-10-20 11:12:57",
+  "location": {
+   "id": 999999,
+   "latitude": "48.53",
+   "longitude": "9.2",
+   "altitude": "373.1",
+   "country": "DE",
+   "exact_location": 0,
+   "indoor": 1
+  },
+  "sensor": {
+   "id": 107,
+   "pin": "5",
+   "sensor_type": {
+    "id": 1,
+    "name": "PPD42NS",
+    "manufacturer": "Shinyei"
+   }
+  },
+  "sensordatavalues": [
+   {
+    "id": 72775938510,
+    "value": "647025.00",
+    "value_type": "durP1"
+   },
+   {
+    "id": 72775938513,
+    "value": "11282.00",
+    "value_type": "durP2"
+   },
+   {
+    "id": 72775938512,
+    "value": "1115.63",
+    "value_type": "P1"
+   },
+   {
+    "id": 72775938515,
+    "value": "20.16",
+    "value_type": "P2"
+   },
+   {
+    "id": 72775938511,
+    "value": "2.15",
+    "value_type": "ratioP1"
+   },
+   {
+    "id": 72775938514,
+    "value": "0.04",
+    "value_type": "ratioP2"
+   }
+  ]
+ }
+]

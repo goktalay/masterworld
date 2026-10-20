@@ -1,0 +1,87 @@
+{
+ "type": "FeatureCollection",
+ "name": "landing_points",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "ganavan-bay-united-kingdom",
+    "name": "Ganavan Bay, United Kingdom",
+    "is_tbd": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.475800791797472,
+     56.43776362936582
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "las-caletillas-spain",
+    "name": "Las Caletillas, Spain",
+    "is_tbd": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -16.36236534527797,
+     28.37727858251394
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sihanoukville-cambodia",
+    "name": "Sihanoukville, Cambodia",
+    "is_tbd": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     103.5066415352679,
+     10.630005631197276
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "kralendijk-bonaire-netherlands",
+    "name": "Kralendijk, Bonaire, Netherlands",
+    "is_tbd": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.27668403743753,
+     12.150684714118114
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "north-salina-bonaire-sint-eustatius-and-saba",
+    "name": "North Salina, Bonaire, Sint Eustatius and Saba",
+    "is_tbd": false
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -68.28414900000034,
+     12.1638160000004
+    ]
+   }
+  }
+ ]
+}

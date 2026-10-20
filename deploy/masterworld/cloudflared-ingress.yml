@@ -1,0 +1,9 @@
+# cloudflared config.yml `ingress:` listesine eklenecek parça (son `service: http_status:404` satırının ÜSTÜNE).
+# Sonra: systemctl restart cloudflared. DNS: Cloudflare panelde CNAME masterworld.com ve www → <tünel-id>.cfargotunnel.com (proxied).
+  - hostname: masterworld.com
+    service: unix:/run/hepgo/masterworld.sock
+    originRequest:
+      noTLSVerify: true
+      connectTimeout: 15s
+  - hostname: www.masterworld.com
+    service: unix:/run/hepgo/masterworld.sock

@@ -1,0 +1,52 @@
+# Her itmede ve PR'da: pyflakes, node --check (vendor hariç JS), testler (SITL yok). Yayın: release.yml.
+name: CI
+
+on:
+  push:
+    branches: ['**']
+    tags-ignore: ['v*']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Bağımlılıklar
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pyflakes
+
+      - name: pyflakes
+        run: |
+          if [ -d app ]; then pyflakes app; else echo "::warning::app/ yok (henüz dışa aktarılmadı)"; fi
+          if [ -d tests ]; then pyflakes tests; fi
+
+      - name: node --check (statik JS, vendor hariç)
+        run: |
+          if [ -d static ]; then
+            find static -name '*.js' -not -path 'static/vendor/*' -print0 | xargs -0 -r -n1 node --check
+          fi
+
+      - name: Testler (ağsız)
+        env:
+          MW_OFFLINE: '1'
+        run: python -m unittest tests.test_sources -v
+
+      - name: Sürüm dosyası
+        run: |
+          [ -f VERSION ] && grep -Eq '^[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}' VERSION || echo "::warning::VERSION yok ya da biçimsiz"

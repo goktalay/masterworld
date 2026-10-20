@@ -1,0 +1,6 @@
+{"type": "FeatureCollection", "metadata": {"generated": 1792494852000, "count": 2}, "features": [
+ {"type": "Feature", "properties": {"mag": 5.0, "place": "88 km SW of Sand Point, Alaska", "time": 1792492840000, "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000abcd", "felt": null, "alert": "green", "tsunami": 0, "magType": "mww"},
+  "geometry": {"type": "Point", "coordinates": [-160.3291, 54.6088, 35.0]}, "id": "us7000abcd"},
+ {"type": "Feature", "properties": {"mag": 1.2, "place": "5 km N of Ridgecrest, CA", "time": 1792491000000, "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci40000001", "magType": "ml"},
+  "geometry": {"type": "Point", "coordinates": [-117.67, 35.67, 7.1]}, "id": "ci40000001"}
+]}

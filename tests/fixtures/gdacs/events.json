@@ -1,0 +1,313 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "bbox": [
+    -160.3291,
+    54.6088,
+    -160.3291,
+    54.6088
+   ],
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -160.3291,
+     54.6088
+    ]
+   },
+   "properties": {
+    "eventtype": "EQ",
+    "eventid": 1572728,
+    "episodeid": 1741365,
+    "eventname": "",
+    "glide": "",
+    "name": "Earthquake in United States",
+    "description": "Earthquake in United States",
+    "htmldescription": "Green M 5 Earthquake in United States at: 20 Oct 2026 10:40:40.",
+    "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+    "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+    "url": {
+     "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1572728&episodeid=1741365",
+     "report": "https://www.gdacs.org/report.aspx?eventid=1572728&episodeid=1741365&eventtype=EQ",
+     "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1572728"
+    },
+    "alertlevel": "Green",
+    "alertscore": 1,
+    "episodealertlevel": "Green",
+    "episodealertscore": 0.0,
+    "istemporary": "true",
+    "iscurrent": "true",
+    "country": "United States",
+    "fromdate": "2026-10-20T10:40:40",
+    "todate": "2026-10-20T10:40:40",
+    "datemodified": "2026-10-20T11:01:05",
+    "iso3": "USA",
+    "source": "NEIC",
+    "sourceid": "",
+    "polygonlabel": "Centroid",
+    "Class": "Point_Centroid",
+    "affectedcountries": [
+     {
+      "iso2": "US",
+      "iso3": "USA",
+      "countryname": "United States"
+     }
+    ],
+    "severitydata": {
+     "severity": 5.0,
+     "severitytext": "Magnitude 5M, Depth:35km",
+     "severityunit": "M"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "bbox": [
+    -178.4627,
+    -15.1536,
+    -178.4627,
+    -15.1536
+   ],
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -178.4627,
+     -15.1536
+    ]
+   },
+   "properties": {
+    "eventtype": "EQ",
+    "eventid": 1572721,
+    "episodeid": 1741355,
+    "eventname": "",
+    "glide": "",
+    "name": "Earthquake in Wallis and Futuna",
+    "description": "Earthquake in Wallis and Futuna",
+    "htmldescription": "Green M 4.5 Earthquake in Wallis and Futuna at: 20 Oct 2026 08:58:37.",
+    "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+    "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+    "url": {
+     "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1572721&episodeid=1741355",
+     "report": "https://www.gdacs.org/report.aspx?eventid=1572721&episodeid=1741355&eventtype=EQ",
+     "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1572721"
+    },
+    "alertlevel": "Green",
+    "alertscore": 1,
+    "episodealertlevel": "Green",
+    "episodealertscore": 0.0,
+    "istemporary": "false",
+    "iscurrent": "true",
+    "country": "Wallis and Futuna",
+    "fromdate": "2026-10-20T08:58:37",
+    "todate": "2026-10-20T08:58:37",
+    "datemodified": "2026-10-20T09:38:43",
+    "iso3": "WLF",
+    "source": "NEIC",
+    "sourceid": "",
+    "polygonlabel": "Centroid",
+    "Class": "Point_Centroid",
+    "affectedcountries": [],
+    "severitydata": {
+     "severity": 4.5,
+     "severitytext": "Magnitude 4.5M, Depth:417.492km",
+     "severityunit": "M"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "bbox": [
+    165.5875,
+    -13.9692,
+    165.5875,
+    -13.9692
+   ],
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     165.5875,
+     -13.9692
+    ]
+   },
+   "properties": {
+    "eventtype": "EQ",
+    "eventid": 1572719,
+    "episodeid": 1741352,
+    "eventname": "",
+    "glide": "",
+    "name": "Earthquake in Vanuatu Islands",
+    "description": "Earthquake in Vanuatu Islands",
+    "htmldescription": "Green M 4.9 Earthquake in Vanuatu Islands at: 20 Oct 2026 08:39:56.",
+    "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+    "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+    "url": {
+     "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1572719&episodeid=1741352",
+     "report": "https://www.gdacs.org/report.aspx?eventid=1572719&episodeid=1741352&eventtype=EQ",
+     "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1572719"
+    },
+    "alertlevel": "Green",
+    "alertscore": 1,
+    "episodealertlevel": "Green",
+    "episodealertscore": 0.0,
+    "istemporary": "false",
+    "iscurrent": "true",
+    "country": "Vanuatu Islands",
+    "fromdate": "2026-10-20T08:39:56",
+    "todate": "2026-10-20T08:39:56",
+    "datemodified": "2026-10-20T09:14:10",
+    "iso3": "",
+    "source": "NEIC",
+    "sourceid": "",
+    "polygonlabel": "Centroid",
+    "Class": "Point_Centroid",
+    "affectedcountries": [],
+    "severitydata": {
+     "severity": 4.9,
+     "severitytext": "Magnitude 4.9M, Depth:10km",
+     "severityunit": "M"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "bbox": [
+    32.075,
+    -1.214,
+    32.075,
+    -1.214
+   ],
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     32.075,
+     -1.214
+    ]
+   },
+   "properties": {
+    "eventtype": "DR",
+    "eventid": 1027465,
+    "episodeid": 9,
+    "eventname": "Uganda, Kenya, Tanzania, Rwanda, Burundi-2026",
+    "glide": "DR-2026-000143-COD",
+    "name": "Drought in Burundi, Democratic Republic of Congo, Kenya, Rwanda, Tanzania, Uganda",
+    "description": "Drought in Burundi, Democratic Republic of Congo, Kenya, Rwanda, Tanzania, Uganda",
+    "htmldescription": "Orange Drought in Burundi, Democratic Republic of Congo, Kenya, Rwanda, Tanzania, Uganda from: 21 May 2026  to: 20 Oct 2026 .",
+    "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png",
+    "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/DR.png",
+    "url": {
+     "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=DR&eventid=1027465&episodeid=9",
+     "report": "https://www.gdacs.org/report.aspx?eventid=1027465&episodeid=9&eventtype=DR",
+     "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=DR&eventid=1027465"
+    },
+    "alertlevel": "Orange",
+    "alertscore": 2,
+    "episodealertlevel": "Orange",
+    "episodealertscore": 1.25,
+    "istemporary": "false",
+    "iscurrent": "false",
+    "country": "Burundi, Democratic Republic of Congo, Kenya, Rwanda, Tanzania, Uganda",
+    "fromdate": "2026-05-21T00:00:00",
+    "todate": "2026-10-20T08:18:20",
+    "datemodified": "2026-10-20T08:18:20",
+    "iso3": "BDI",
+    "source": "GDO",
+    "sourceid": "",
+    "polygonlabel": "Centroid",
+    "Class": "Point_Centroid",
+    "affectedcountries": [
+     {
+      "iso2": "BI",
+      "iso3": "BDI",
+      "countryname": "Burundi"
+     },
+     {
+      "iso2": "CD",
+      "iso3": "COD",
+      "countryname": "Democratic Republic of Congo"
+     },
+     {
+      "iso2": "KE",
+      "iso3": "KEN",
+      "countryname": "Kenya"
+     },
+     {
+      "iso2": "RW",
+      "iso3": "RWA",
+      "countryname": "Rwanda"
+     },
+     {
+      "iso2": "TZ",
+      "iso3": "TZA",
+      "countryname": "Tanzania"
+     },
+     {
+      "iso2": "UG",
+      "iso3": "UGA",
+      "countryname": "Uganda"
+     }
+    ],
+    "severitydata": {
+     "severity": 172173.0,
+     "severitytext": "Medium impact for agricultural drought in 172173 km2",
+     "severityunit": "km2"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "bbox": [
+    77.53,
+    13.863,
+    77.53,
+    13.863
+   ],
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     77.53,
+     13.863
+    ]
+   },
+   "properties": {
+    "eventtype": "DR",
+    "eventid": 1027575,
+    "episodeid": 6,
+    "eventname": "India-2026",
+    "glide": "",
+    "name": "Drought in Southern India",
+    "description": "Drought in Southern India",
+    "htmldescription": "Green Drought in Southern India from: 21 Jan 2026  to: 20 Oct 2026 .",
+    "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/DR.png",
+    "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/DR.png",
+    "url": {
+     "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=DR&eventid=1027575&episodeid=6",
+     "report": "https://www.gdacs.org/report.aspx?eventid=1027575&episodeid=6&eventtype=DR",
+     "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=DR&eventid=1027575"
+    },
+    "alertlevel": "Green",
+    "alertscore": 1,
+    "episodealertlevel": "Green",
+    "episodealertscore": 0.5,
+    "istemporary": "false",
+    "iscurrent": "false",
+    "country": "Southern India",
+    "fromdate": "2026-01-21T00:00:00",
+    "todate": "2026-10-20T08:18:17",
+    "datemodified": "2026-10-20T08:18:18",
+    "iso3": "IND",
+    "source": "GDO",
+    "sourceid": "",
+    "polygonlabel": "Centroid",
+    "Class": "Point_Centroid",
+    "affectedcountries": [],
+    "severitydata": {
+     "severity": 514084.0,
+     "severitytext": "Minor impact for agricultural drought in 514084 km2",
+     "severityunit": "km2"
+    }
+   }
+  }
+ ],
+ "bbox": null
+}

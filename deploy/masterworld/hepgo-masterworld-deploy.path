@@ -1,0 +1,13 @@
+# MASTERWORLD otomatik yayın tetikleyicisi (root). Hesap servisi (hepgo kullanıcısı) POST /api/mw/web-releases ile paketi
+# /opt/hepgo/sshmaster/data/releases/mw/<v>/ altına yazar ve `latest` dosyasını atomik olarak yeniler; bu unit o dosyayı izler.
+# Kurulum: cp hepgo-masterworld-deploy.{path,service} /etc/systemd/system/ && systemctl daemon-reload &&
+#          systemctl enable --now hepgo-masterworld-deploy.path
+[Unit]
+Description=MASTERWORLD yeni sürüm izleyicisi (releases/mw/latest)
+
+[Path]
+PathChanged=/opt/hepgo/sshmaster/data/releases/mw/latest
+Unit=hepgo-masterworld-deploy.service
+
+[Install]
+WantedBy=multi-user.target

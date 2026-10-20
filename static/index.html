@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MASTERWORLD — live data on a 3D globe</title>
+<meta name="description" content="Aircraft, satellites, earthquakes, webcams, radio stations and more — live public data sources on one 3D globe.">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<meta property="og:title" content="MASTERWORLD">
+<meta property="og:description" content="Live public data on a 3D globe: aircraft, satellites, earthquakes, webcams, radio.">
+<meta property="og:image" content="https://masterworld.app/img/og.png">
+<meta property="og:url" content="https://masterworld.app/">
+<link rel="stylesheet" href="/vendor/maplibre-gl/maplibre-gl.css">
+<link rel="stylesheet" href="/css/app.css">
+<script type="module" src="/js/app.js"></script>
+</head>
+<body class="booting">
+<div id="map" aria-label="Globe"></div>
+
+<header class="topbar">
+  <a class="brand glass" href="/" aria-label="MASTERWORLD">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><use href="/img/icons.svg#logo"/></svg>
+    <span>MASTER<b>WORLD</b></span>
+  </a>
+  <div class="search glass">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="/img/icons.svg#search"/></svg>
+    <input id="search" type="search" autocomplete="off" spellcheck="false" data-i18n-ph="search.ph" placeholder="Search">
+    <div id="search-results" class="results" hidden></div>
+  </div>
+  <div class="tools">
+    <button id="btn-layers" class="ibtn glass" data-i18n-title="layers.title" title="Layers"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#layers"/></svg></button>
+    <button id="btn-base" class="ibtn glass" data-i18n-title="base.title" title="Map style"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#globe"/></svg></button>
+    <button id="btn-locate" class="ibtn glass" data-i18n-title="locate" title="My location"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#locate"/></svg></button>
+    <button id="btn-account" class="ibtn glass acct" data-i18n-title="account.title" title="Account"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#user"/></svg><span class="dot" hidden></span></button>
+  </div>
+</header>
+
+<aside id="panel" class="panel glass" aria-label="Layers">
+  <div class="panel-head">
+    <h2 data-i18n="layers.title">Layers</h2>
+    <span id="live-count" class="pill"></span>
+    <button class="ibtn plain" id="panel-close" aria-label="Close"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#close"/></svg></button>
+  </div>
+  <div id="cats" class="cats"></div>
+  <details class="catalog">
+    <summary data-i18n="catalog.title">More sources</summary>
+    <p class="muted small" data-i18n="catalog.text">Listed for reference; not drawn yet (needs a key or an adapter).</p>
+    <ul id="catalog"></ul>
+  </details>
+  <div class="panel-foot">
+    <span class="muted small" id="sync-state"></span>
+  </div>
+</aside>
+
+<div id="basemenu" class="menu glass" hidden></div>
+
+<div id="card" class="card glass" hidden role="dialog" aria-live="polite"></div>
+<div id="hover" class="hover" hidden></div>
+
+<div id="player" class="player glass" hidden>
+  <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <img id="player-logo" alt="" hidden>
+  <div class="meta"><b id="player-name"></b><span id="player-sub" class="muted small"></span></div>
+  <button id="player-toggle" class="ibtn plain" aria-label="Play/Pause"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#pause"/></svg></button>
+  <input id="player-vol" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+  <button id="player-close" class="ibtn plain" aria-label="Close"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#close"/></svg></button>
+  <audio id="audio" preload="none"></audio>
+</div>
+
+<footer class="status">
+  <span class="live"><i></i><span id="status-text">…</span></span>
+</footer>
+<div id="attrib" class="attrib"></div>
+
+<div id="auth" class="modal" hidden>
+  <div class="modal-box glass">
+    <button class="ibtn plain modal-x" data-auth-close aria-label="Close"><svg viewBox="0 0 24 24"><use href="/img/icons.svg#close"/></svg></button>
+    <h2 id="auth-title"></h2>
+    <p id="auth-msg" class="msg" hidden></p>
+    <form id="f-login" data-view="login">
+      <label><span data-i18n="auth.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+      <label><span data-i18n="auth.password">Password</span><input name="password" type="password" required autocomplete="current-password"></label>
+      <button class="btn primary" type="submit" data-i18n="auth.login.btn">Sign in</button>
+      <p class="small"><a href="#" data-auth="forgot" data-i18n="auth.forgot.link">Forgot password?</a> · <a href="#" data-auth="register" data-i18n="auth.register.link">Create account</a></p>
+    </form>
+    <form id="f-register" data-view="register" hidden>
+      <label><span data-i18n="auth.name">Name</span><input name="name" required maxlength="80" autocomplete="name"></label>
+      <label><span data-i18n="auth.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+      <label><span data-i18n="auth.password">Password</span><input name="password" type="password" required minlength="8" autocomplete="new-password"></label>
+      <label><span data-i18n="auth.password2">Password (again)</span><input name="password2" type="password" required minlength="8" autocomplete="new-password"></label>
+      <button class="btn primary" type="submit" data-i18n="auth.register.btn">Create account</button>
+      <p class="small muted" data-i18n="auth.mt">One Mastertool account for every Mastertool app.</p>
+      <p class="small"><a href="#" data-auth="login" data-i18n="auth.login.link">I have an account</a></p>
+    </form>
+    <form id="f-forgot" data-view="forgot" hidden>
+      <label><span data-i18n="auth.email">E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+      <button class="btn primary" type="submit" data-i18n="auth.forgot.btn">Send reset link</button>
+      <p class="small"><a href="#" data-auth="login" data-i18n="auth.login.link">I have an account</a></p>
+    </form>
+    <div data-view="verify" hidden>
+      <p id="verify-text"></p>
+      <p class="small"><a href="#" id="resend" data-i18n="auth.verify.resend">Resend e-mail</a> · <a href="#" data-auth="login" data-i18n="auth.login.link">I have an account</a></p>
+    </div>
+    <div data-view="account" hidden>
+      <p id="acct-who"></p>
+      <p class="small muted" data-i18n="account.synced">Your layers, map style and view are saved to your account.</p>
+      <div class="row">
+        <a class="btn" href="https://mastertool.download/hesabim" target="_blank" rel="noopener" data-i18n="account.manage">Manage account</a>
+        <button class="btn" id="btn-logout" type="button" data-i18n="account.logout">Sign out</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<noscript><p class="noscript">MASTERWORLD needs JavaScript and WebGL.</p></noscript>
+</body>
+</html>

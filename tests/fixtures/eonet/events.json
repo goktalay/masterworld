@@ -1,0 +1,304 @@
+{
+ "title": "EONET Events",
+ "description": "Natural events from EONET.",
+ "link": "https://eonet.gsfc.nasa.gov/api/v3/events",
+ "events": [
+  {
+   "id": "EONET_25340",
+   "title": "Tropical Cyclone Wati",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25340",
+   "closed": null,
+   "categories": [
+    {
+     "id": "severeStorms",
+     "title": "Severe Storms"
+    }
+   ],
+   "sources": [
+    {
+     "id": "JTWC",
+     "url": "https://www.metoc.navy.mil/jtwc/products/sh0127.tcw"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": 55.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-18T18:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -160.2,
+      -18.6
+     ]
+    },
+    {
+     "magnitudeValue": 50.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-19T00:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -158.9,
+      -19.9
+     ]
+    },
+    {
+     "magnitudeValue": 45.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-19T06:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -156.8,
+      -20.7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EONET_25339",
+   "title": "Super Typhoon Champi",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25339",
+   "closed": null,
+   "categories": [
+    {
+     "id": "severeStorms",
+     "title": "Severe Storms"
+    }
+   ],
+   "sources": [
+    {
+     "id": "JTWC",
+     "url": "https://www.metoc.navy.mil/jtwc/products/wp2926.tcw"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": 135.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-19T18:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      136.7,
+      15.4
+     ]
+    },
+    {
+     "magnitudeValue": 130.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-20T00:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      135.6,
+      15.9
+     ]
+    },
+    {
+     "magnitudeValue": 135.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-20T06:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      134.4,
+      16.5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EONET_25310",
+   "title": "Prescribed Fire Newman Piles RX, Coconino, Arizona",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25310",
+   "closed": null,
+   "categories": [
+    {
+     "id": "wildfires",
+     "title": "Wildfires"
+    }
+   ],
+   "sources": [
+    {
+     "id": "IRWIN",
+     "url": "https://irwin.doi.gov/observer/incidents/2026-AZCOF-001566"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": 751.0,
+     "magnitudeUnit": "acres",
+     "date": "2026-10-14T10:42:00Z",
+     "type": "Point",
+     "coordinates": [
+      -111.65,
+      35.016667
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EONET_25290",
+   "title": "Hurricane Trudy",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25290",
+   "closed": null,
+   "categories": [
+    {
+     "id": "severeStorms",
+     "title": "Severe Storms"
+    }
+   ],
+   "sources": [
+    {
+     "id": "JTWC",
+     "url": "https://www.metoc.navy.mil/jtwc/products/ep2126.tcw"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": 50.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-19T12:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -108.3,
+      19.6
+     ]
+    },
+    {
+     "magnitudeValue": 40.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-19T18:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -107.9,
+      19.5
+     ]
+    },
+    {
+     "magnitudeValue": 30.0,
+     "magnitudeUnit": "kts",
+     "date": "2026-10-20T00:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -108,
+      19.4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EONET_25268",
+   "title": "Iceberg B52",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25268",
+   "closed": null,
+   "categories": [
+    {
+     "id": "seaLakeIce",
+     "title": "Sea and Lake Ice"
+    }
+   ],
+   "sources": [
+    {
+     "id": "NATICE",
+     "url": "https://usicecenter.gov/pub/Iceberg_Tabular.csv"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": 48.88,
+     "magnitudeUnit": "NM^2",
+     "date": "2026-10-09T00:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -130.24,
+      -74.4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EONET_20710",
+   "title": "Nevados del Chillan Volcano, Chile",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_20710",
+   "closed": null,
+   "categories": [
+    {
+     "id": "volcanoes",
+     "title": "Volcanoes"
+    }
+   ],
+   "sources": [
+    {
+     "id": "SIVolcano",
+     "url": "https://volcano.si.edu/volcano.cfm?vn=357070"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": null,
+     "magnitudeUnit": null,
+     "date": "2026-06-15T00:00:00Z",
+     "type": "Point",
+     "coordinates": [
+      -71.378,
+      -36.868
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EONET_TEST_POLY",
+   "title": "Test buz poligonu",
+   "description": null,
+   "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_TEST_POLY",
+   "closed": null,
+   "categories": [
+    {
+     "id": "seaLakeIce",
+     "title": "Sea and Lake Ice"
+    }
+   ],
+   "sources": [
+    {
+     "id": "NATICE",
+     "url": "https://usicecenter.gov/"
+    }
+   ],
+   "geometry": [
+    {
+     "magnitudeValue": null,
+     "magnitudeUnit": null,
+     "date": "2026-10-19T00:00:00Z",
+     "type": "Polygon",
+     "coordinates": [
+      [
+       [
+        -60,
+        -70
+       ],
+       [
+        -58,
+        -70
+       ],
+       [
+        -58,
+        -68
+       ],
+       [
+        -60,
+        -68
+       ],
+       [
+        -60,
+        -70
+       ]
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

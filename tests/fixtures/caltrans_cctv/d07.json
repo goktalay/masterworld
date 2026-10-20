@@ -1,0 +1,13 @@
+{"data": [
+ {"cctv": {"index": "1", "recordTimestamp": {"recordDate": "2026-10-20", "recordTime": "04:00:00"},
+  "location": {"district": "7", "locationName": "I-5 : (601) Hollywood Way", "nearbyPlace": "Burbank", "longitude": "-118.334663", "latitude": "34.191402",
+   "elevation": "603", "direction": "South", "county": "Los Angeles", "route": "I-5", "routeSuffix": "", "postmilePrefix": "", "postmile": "31.3", "alignment": "", "milepost": "157.38"},
+  "inService": "true",
+  "imageData": {"imageDescription": "", "streamingVideoURL": "https://wzmedia.dot.ca.gov/D7/CCTV-363.stream/playlist.m3u8",
+   "static": {"currentImageUpdateFrequency": "1", "currentImageURL": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i5hollywoodway/i5hollywoodway.jpg",
+    "referenceImageUpdateFrequency": "1", "referenceImage1UpdateAgoURL": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/i5hollywoodway/previous/i5hollywoodway-1.jpg"}}}},
+ {"cctv": {"index": "2", "location": {"district": "7", "locationName": "I-10 : La Brea", "longitude": "-118.344", "latitude": "34.034", "route": "I-10", "county": "Los Angeles"},
+  "inService": "false", "imageData": {"streamingVideoURL": "Not Reported", "static": {"currentImageURL": "Not Reported"}}}},
+ {"cctv": {"index": "3", "location": {"district": "7", "locationName": "SR-110 : 4th St", "longitude": "-118.25", "latitude": "34.05", "route": "SR-110"},
+  "inService": "true", "imageData": {"streamingVideoURL": "Not Reported", "static": {"currentImageURL": "https://cwwp2.dot.ca.gov/data/d7/cctv/image/sr110/sr110.jpg"}}}}
+]}
